@@ -16,4 +16,4 @@ if __name__ == '__main__':
     app.add_url_rule('/private/<path:filename>', endpoint='private', view_func=app.send_static_file)
     # 启动应用程序
     #app.run()
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(host='0.0.0.0', port=10000)
