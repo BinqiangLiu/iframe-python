@@ -1,6 +1,10 @@
 from flask import Flask, render_template
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import os
+from dotenv import load_dotenv
+load_dotenv()
+port=os.getenv('port')
 
 app = Flask(__name__)
 
@@ -23,4 +27,4 @@ def index():
 
 if __name__ == '__main__':
    # app.run()
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(host='0.0.0.0', port=port)
